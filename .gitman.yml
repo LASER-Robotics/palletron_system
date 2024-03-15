@@ -1,0 +1,66 @@
+location: .gitman
+sources:
+  - repo: https://github.com/aws-robotics/aws-robomaker-small-warehouse-world.git
+    name: aws_robomaker_small_warehouse_world
+    rev: ros2
+    type: git
+    params:
+    sparse_paths:
+      -
+    links:
+      - source: ''
+        target: ros_packages/aws_robomaker_small_warehouse_world
+    scripts:
+      - git submodule update --init --recursive
+  - repo: git@github.com:LASER-Robotics/palletron_gazebo.git
+    name: palletron_gazebo
+    rev: main
+    type: git
+    params:
+    sparse_paths:
+      -
+    links:
+      - source: ''
+        target: ros_packages/palletron_gazebo
+    scripts:
+      - git submodule update --init --recursive
+  - repo: https://github.com/LASER-Robotics/ira_laser_tools
+    name: ira_laser_tools
+    rev: humble
+    type: git
+    params:
+    sparse_paths:
+      -
+    links:
+      - source: ''
+        target: ros_packages/ira_laser_tools
+    scripts:
+      - git submodule update --init --recursive
+  - repo: git@github.com:LASER-Robotics/palletron_bringup.git
+    name: palletron_bringup
+    rev: main
+    type: git
+    params:
+    sparse_paths:
+      -
+    links:
+      - source: ''
+        target: ros_packages/palletron_bringup
+    scripts:
+      - git submodule update --init --recursive
+  - repo: git@github.com:LASER-Robotics/palletron_visualization.git
+    name: palletron_visualization
+    rev: main
+    type: git
+    params:
+    sparse_paths:
+      -
+    links:
+      - source: ''
+        target: ros_packages/palletron_visualization
+    scripts:
+      - git submodule update --init --recursive
+sources_locked:
+groups:
+  -
+default_group: ''
